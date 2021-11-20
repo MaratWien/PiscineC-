@@ -6,11 +6,11 @@
 #    By: hfunctio <hfunctio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 18:05:27 by hfunctio          #+#    #+#              #
-#    Updated: 2021/11/20 18:05:31 by hfunctio         ###   ########.fr        #
+#    Updated: 2021/11/20 18:10:08 by hfunctio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = adress_book
 
 CC = clang++
 
@@ -18,7 +18,7 @@ FLAGS = -Wall -Wextra -Werror
 
 RM = rm -rf
 
-SRCS = megaphone.cpp
+SRCS = main.cpp
 
 OBJS_DIR = Objects
 
