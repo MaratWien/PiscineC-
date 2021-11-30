@@ -6,7 +6,7 @@
 #    By: hfunctio <hfunctio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 18:05:27 by hfunctio          #+#    #+#              #
-#    Updated: 2021/11/20 18:10:08 by hfunctio         ###   ########.fr        #
+#    Updated: 2021/11/30 18:23:18 by hfunctio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,9 @@ FLAGS = -Wall -Wextra -Werror
 
 RM = rm -rf
 
-SRCS = main.cpp
+SRCS = main.cpp AddressBook.cpp
+
+HDRS = AddressBook.hpp
 
 OBJS_DIR = Objects
 
@@ -29,7 +31,7 @@ all: $(NAME)
 GREEN = \033[0;32m
 RESET = \033[0m
 
-$(OBJS_DIR)/%.o: %.cpp
+$(OBJS_DIR)/%.o: %.cpp $(HDRS)
 	@mkdir -p $(OBJS_DIR)
 	@$(CC) $(FLAGS) -c $< -o $@
 
