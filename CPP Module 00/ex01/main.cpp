@@ -6,7 +6,7 @@
 /*   By: hfunctio <hfunctio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:10:13 by hfunctio          #+#    #+#             */
-/*   Updated: 2021/11/22 20:31:48 by hfunctio         ###   ########.fr       */
+/*   Updated: 2021/11/30 13:41:33 by hfunctio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 int main(void)
 {
 	std::string command;
+	int a = 0;
 
+	a++;
 	while (1)
 	{
 		std::cout << "\e[0;37mEnter command: ";
