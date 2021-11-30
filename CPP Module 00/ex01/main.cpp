@@ -6,16 +6,16 @@
 /*   By: hfunctio <hfunctio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:10:13 by hfunctio          #+#    #+#             */
-/*   Updated: 2021/11/30 18:25:01 by hfunctio         ###   ########.fr       */
+/*   Updated: 2021/11/30 19:00:31 by hfunctio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AddressBook.hpp"
+#include "PhoneBook.hpp"
 
 int main(void)
 {
 	std::string command;
-	AddressBook addressBook;
+	PhoneBook PhoneBook;
 
 	while (1)
 	{
@@ -24,13 +24,9 @@ int main(void)
 		if (command == "EXIT")
 			break;
 		else if (command == "ADD")
-		{
-			/* code */
-		}
+			PhoneBook.addContact();
 		else if (command == "SEARCH")
-		{
-			/* code */
-		}
+			PhoneBook.searchContact();
 		else
 			std::cout << "\e[0;31mError. Forbidden input." << std::endl << "Please enter: ADD, SEARCH, EXIT." << std::endl;
 	}
