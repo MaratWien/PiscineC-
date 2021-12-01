@@ -6,7 +6,7 @@
 #    By: hfunctio <hfunctio@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 18:05:27 by hfunctio          #+#    #+#              #
-#    Updated: 2021/11/30 18:59:11 by hfunctio         ###   ########.fr        #
+#    Updated: 2021/12/01 13:25:31 by hfunctio         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,9 @@ FLAGS = -Wall -Wextra -Werror
 
 RM = rm -rf
 
-SRCS = main.cpp PhoneBook.cpp
+SRCS = main.cpp PhoneBook.cpp Contact.cpp
 
-HDRS = PhoneBook.hpp
+HDRS = PhoneBook.hpp Contact.hpp
 
 OBJS_DIR = Objects
 

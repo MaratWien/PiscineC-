@@ -6,7 +6,7 @@
 /*   By: hfunctio <hfunctio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 15:53:36 by hfunctio          #+#    #+#             */
-/*   Updated: 2021/11/30 19:18:21 by hfunctio         ###   ########.fr       */
+/*   Updated: 2021/12/01 15:45:49 by hfunctio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include <iomanip>
 # include "Contact.hpp"
 
 class PhoneBook {
@@ -22,8 +23,14 @@ private:
 	Contact contact[8];
 
 public:
-	void addContact();
-	void searchContact();
+	PhoneBook();
+	~PhoneBook();
+	void 		addContact();
+	void 		searchContact();
+	std::string	data;
+	std::string firstName;
+	std::string	lastName;
+	std::string nickName;
 };
 
 #endif

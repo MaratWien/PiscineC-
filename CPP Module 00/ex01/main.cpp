@@ -6,7 +6,7 @@
 /*   By: hfunctio <hfunctio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 18:10:13 by hfunctio          #+#    #+#             */
-/*   Updated: 2021/11/30 19:00:31 by hfunctio         ###   ########.fr       */
+/*   Updated: 2021/12/01 15:46:38 by hfunctio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(void)
 	{
 		std::cout << "\e[0;37mEnter command: ";
 		std::getline(std::cin, command);
+		std::cout << '\n';
 		if (command == "EXIT")
 			break;
 		else if (command == "ADD")
@@ -28,7 +29,7 @@ int main(void)
 		else if (command == "SEARCH")
 			PhoneBook.searchContact();
 		else
-			std::cout << "\e[0;31mError. Forbidden input." << std::endl << "Please enter: ADD, SEARCH, EXIT." << std::endl;
+			std::cout << "\e[0;31mError. Forbidden input." << std::endl << "Please enter: ADD, SEARCH, EXIT." << std::endl << '\n';
 	}
 	return 0;
 }
