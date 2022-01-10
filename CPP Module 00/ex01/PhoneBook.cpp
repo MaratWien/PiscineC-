@@ -6,7 +6,7 @@
 /*   By: hfunctio <hfunctio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 16:03:14 by hfunctio          #+#    #+#             */
-/*   Updated: 2021/12/01 15:52:39 by hfunctio         ###   ########.fr       */
+/*   Updated: 2022/01/08 13:16:11 by hfunctio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void PhoneBook::searchContact() {
 
 		nickName = contact[j].getNickName();
 		if (nickName.length() > 10) {
-			nickName = nickName.substr(0, 9) + ".";
+			nickName = nickName.substr(0, 10) + ".";
 			std::cout << "*|*" << nickName << std::setw(10 - nickName.length()) << "**" << '\n';
 		}
 		else
@@ -92,22 +92,27 @@ void PhoneBook::searchContact() {
 	}
 
 	while (1) {
-		std::cout << "\e[0;37mEnter index of contact(1-" << countContact << ") or enter 101 for return on prev.step: " << '\n';
+		std::cout << "\e[0;37mEnter index of contact(1-" << countContact << ") or enter 101 for return on prev.step: ";
 		std::cin >> input;
 
 		if (input == 101)
-			break ;
-		else if (input < 1 || input > countContact || !input) {
+		{
 			std::cin.clear();
+			std::cin.ignore();
+			break ;
+		}
+		else if (input < 1 || input > countContact || !input) {
 			std::cout << "\e[0;31mError. Invalid index. Enter correct index or enter 101 for return on prev.step." << '\n' << '\n';
+			std::cin.clear();
+			std::cin.ignore(1000, '\n');
 			continue ;
 		}
 		else if (input > 0 && input <= countContact) {
-			std::cout << '\n' << "First name is: " << contact[--input].getFirstName() << '\n';
-			std::cout << "Last name is: " << contact[input].getLastName() << '\n';
-			std::cout << "Nickname is: " << contact[input].getNickName() << '\n';
-			std::cout << "Phone number is: " << contact[input].getPhoneNumber() << '\n';
-			std::cout << "Darkest secret is: " << contact[input].getDarkSecret() << '\n' << '\n';
+			std::cout << '\n' << "First name is: " << '\t' << contact[--input].getFirstName() << '\n';
+			std::cout << "Last name is: " << '\t' << contact[input].getLastName() << '\n';
+			std::cout << "Nickname is: " << '\t' << contact[input].getNickName() << '\n';
+			std::cout << "Phone number is: " << '\t' << contact[input].getPhoneNumber() << '\n';
+			std::cout << "Darkest secret is: " << '\t' << contact[input].getDarkSecret() << '\n' << '\n';
 			continue ;
 		}
 	}
