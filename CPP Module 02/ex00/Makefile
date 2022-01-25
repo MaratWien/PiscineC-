@@ -1,4 +1,4 @@
-NAME = replace
+NAME = fixed
 
 CC = clang++
 
@@ -6,7 +6,9 @@ FLAGS = -Wall -Wextra -Werror
 
 RM = rm -rf
 
-SRCS = main.cpp
+SRCS = main.cpp Fixed.cpp
+
+HDRS = Fixed.hpp
 
 OBJS_DIR = Objects
 
